@@ -1,0 +1,237 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+  animation: fadeIn 1s;
+}
+
+.guidelines::before,
+.guidelines::after {
+    content: '';
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.3); /* Adjust color and opacity as needed */
+    z-index: 1000;
+    pointer-events: none; /* Makes sure it doesn't interfere with your design */
+}
+
+.guidelines::before {
+    width: 2px;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+
+.guidelines::after {
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.image_header {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  background: #000; /* fallback if image slow */
+}
+
+.image_header img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7); /* darken image subtly for text contrast */
+}
+
+.black {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.textimg {
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fef8e7; /* soft warm white */
+  font-weight: 300;
+  font-size: 2rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-align: center;
+  z-index: 2;
+  max-width: 600px;
+  width: 90%;
+  line-height: 1.1;
+}
+
+.image-info {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75%;
+  max-width: 500px;
+  color: #fef8e7;
+  font-weight: 300;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-align: center;
+  line-height: 1.6;
+  font-style: italic;
+  z-index: 2;
+  margin: 0 auto;
+}
+
+.image_header button {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 28px;
+  border: none;
+  border-radius: 20px;
+  background-color: #ffc900;
+  color: #000;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(255, 201, 0, 0.6);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 2;
+}
+
+.image_header button:hover {
+  background-color: #ffde3c;
+  box-shadow: 0 6px 18px rgba(255, 222, 60, 0.8);
+}
+
+.image_header button a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+
+.page-2 {
+  position: relative;
+  background-color: linen;
+  padding-left: 15%;
+  padding-top: 15%;
+  padding-bottom: 10%;
+}
+
+#text2 {
+  line-height: 65px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 50px;
+  width: 30%;
+  margin-bottom: 25px;
+}
+
+#par2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  width: 35%;
+  margin-bottom: 40px;
+}
+
+#img2 {
+  position: absolute;
+  top: 20%;
+  left: 60%;
+}
+
+.page-3 {
+  position: relative;
+  background-color: white;
+  padding-left: 10%;
+  padding-top: 10%;
+  padding-bottom: 30%;
+}
+
+.line {
+  position: absolute;
+  margin-left: 3%;
+  height: 1%;
+  width: 2%;
+  background-color: rgb(255, 200, 0);
+}
+
+.page-3 h1 {
+  line-height: 65px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 50px;
+  width: 20%;
+}
+
+.offer-part-1 h2,
+.offer-part-2 h2,
+.offer-part-3 h2 {
+  padding-top: 30px;
+}
+
+.offer-part-1 p,
+.offer-part-2 p,
+.offer-part-3 p {
+  padding-top: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 15px;
+}
+
+.offer-part-1 p {
+  width: 23%;
+}
+
+.offer-part-2 p {
+  width: 35%;
+}
+
+.offer-part-3 p {
+  width: 70%;
+}
+
+.offer-part-1 {
+  padding-left: 22%;
+  position: absolute;
+  top: 15%;
+}
+
+.offer-part-2 {
+  position: absolute;
+  top: 15%;
+  left: 55%;
+}
+
+.offer-part-3 {
+  position: absolute;
+  top: 15%;
+  left: 78%;
+}

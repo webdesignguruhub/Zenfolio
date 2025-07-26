@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Store - ZenFolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+    import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyC1_E7FdmqjpKDn2tcLj_YSjCfn0XhCjq0",
+      authDomain: "zenfolio-5b66b.firebaseapp.com",
+      projectId: "zenfolio-5b66b",
+      storageBucket: "zenfolio-5b66b.appspot.com",
+      messagingSenderId: "1045938206313",
+      appId: "1:1045938206313:web:b86a3b4c14e01e570c54f8",
+      measurementId: "G-66Y59Q0M3S"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    async function fetchAndDisplayProducts() {
+      const productsCol = collection(db, 'store items');
+      const productSnapshot = await getDocs(productsCol);
+      const productList = productSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+
+      const grid = document.getElementById('product-grid');
+      productList.forEach(product => {
+        const card = document.createElement('div');
+        card.className = "bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-[1.03] transition-transform";
+
+        card.innerHTML = `
+          <img src="${product.image || 'https://via.placeholder.com/400x300'}" alt="${product.product}" class="w-full h-56 object-cover" />
+          <div class="p-4">
+            <h3 class="text-xl font-semibold">${product.product}</h3>
+            <p class="text-gray-600 mb-2">${product.des || ''}</p>
+            <div class="flex justify-between items-center">
+              <span class="font-bold text-[#ffc900]">Rs. ${product.price || 'N/A'}</span>
+              <button class="bg-black text-white text-sm px-4 py-1.5 rounded hover:bg-gray-800">Buy Now</button>
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    window.addEventListener('DOMContentLoaded', fetchAndDisplayProducts);
+  </script>
+</head>
+
+<body class="bg-[#fef8e7] text-black">
+  <!-- Header -->
+  <header class="bg-[#ffc900] shadow-md sticky top-0 z-50">
+    <div class="px-6 py-4 flex items-center justify-between max-w-7xl mx-auto">
+         <a href="index.html"><img class="logo" src="/Images/ZenFolio logo.png" width= "200px" height="50%"></a>
+      <nav class="space-x-6">
+        <a href="index.html" class="text-black hover:text-white transition">Home</a>
+        <a href="about.html" class="text-black hover:text-white transition">About</a>
+        <a href="store.html" class="text-black hover:text-white transition">Store</a>
+        <a href="contact.html" class="text-black hover:text-white transition">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="text-center py-12 bg-white">
+    <h1 class="text-4xl font-bold mb-4">Discover Our Collection</h1>
+    <p class="text-lg text-gray-700">Premium designs. Handpicked with care.</p>
+  </section>
+
+  <!-- Product Grid -->
+  <section id="product-grid" class="px-6 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+    <!-- Firebase content will be inserted here -->
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-8">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+      <p class="text-sm">&copy; 2025 ZenFolio. All rights reserved.</p>
+      <div class="space-x-4">
+        <a href="#" class="hover:text-[#ffc900] transition">Instagram</a>
+        <a href="#" class="hover:text-[#ffc900] transition">Facebook</a>
+        <a href="#" class="hover:text-[#ffc900] transition">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
