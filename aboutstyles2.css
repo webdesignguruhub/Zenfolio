@@ -35,9 +35,7 @@
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
-  }
-
-  
+}
 
 .yellow{
     position: absolute;
@@ -46,8 +44,7 @@
     background-color: rgb(255, 200, 0);
 }
 
-
-   .yellow h1{
+.yellow h1{
     position: relative;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
@@ -56,43 +53,42 @@
     padding-top: 5%;
     text-align: center;
     color: black;
-   }
+}
 
-   main{
+main{
     background-color: aliceblue;
     padding-bottom: 10%;
-   }
+}
 
-   main img{
+main img{
     position:relative;
     padding-top: 13%;
     left: 28%;
     width: 45%;
-   }
+}
 
-   main p{
+main p{
     padding-top: 4%;
     padding-left:28%;
-   width:  74%;
-   line-height: 30px;
-   text-align:left;
-   font-family: "Poppins", sans-serif;
-   font-weight: 400;
-   font-style: normal;
-   font-size: 15px;
-   }
+    width:  74%;
+    line-height: 30px;
+    text-align:left;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+}
 
-   .aboutline{
+.aboutline{
     position: absolute;
     top:46;
     left:49%;
     background-color: rgb(255, 255, 255);
     width: 30px;
     height: 5px;
+}
 
-   }
-
-   .page2{
+.page2{
     background-color: none;
     width:100%;
     height:500px;
@@ -101,20 +97,20 @@
     font-style: normal;
     padding-top:0%;
     margin-bottom: 5%;
-   }
+}
 
-   .page2 h1{
+.page2 h1{
     padding-bottom:3% ;
     font-size: 35px;
-   }
+}
 
-   .page2 p{
+.page2 p{
     font-weight: 400;
     line-height: 30px;
-   }
+}
 
-  .vision{
- text-align: justify;
+.vision{
+    text-align: justify;
     position: absolute;
     width: 29%;
     top: 30%;
@@ -125,8 +121,9 @@
     background-color: #fff7ed;
     color: rgb(0, 0, 0);
     box-shadow: 10px 10px 10px 5px rgb(155, 155, 155);
-  }
-   .mission {
+}
+
+.mission {
     text-align: justify;
     position: absolute;
     width: 30%;
@@ -138,48 +135,46 @@
     background-color: #fff7ed;
     color: rgb(0, 0, 0);
     box-shadow: 10px 10px 10px 5px rgb(155, 155, 155);
-   }
+}
 
-   .page3{
+.page3{
     font-family: "Poppins", sans-serif;
     font-style: normal;
     align-content: center;
     background-color: linen;
     position: relative;
-   }
+}
 
-   .page3 h1{
+.page3 h1{
     margin: 5%;
     text-align: center;
     font-size: 50px;
-   }
+}
 
-   .Founder-line{
+.Founder-line{
     position: absolute;
     top:7%;
     left:49%;
     background-color: rgb(255, 187, 0);
     width: 30px;
     height: 5px;
+}
 
-   }
-
-
-   .new{
+.new{
     display: flex;
     flex-direction:column;
     padding-top:10px ;
     padding-left: 20%;
     align-items: center;
-   }
+}
 
-   .Jane{
-        margin-top:15% ;
-        line-height: 25px;
-        font-weight:200;    
-   }
+.Jane{
+    margin-top:15% ;
+    line-height: 25px;
+    font-weight:200;    
+}
 
-   .Jane h4{
+.Jane h4{
     text-align: left;
     margin-bottom:10px;
     line-height: 65px;
@@ -188,21 +183,21 @@
     font-style: normal;
     font-size: 50px;
     width: 70%;
-   }
+}
 
-   .Jane p{
+.Jane p{
     width:33%;
     font-weight: 300;
-   }
+}
 
-   .Jane img{
+.Jane img{
     position: absolute;
     top: 15%;
     left:60%;
     border-radius: 10%;
-   }
+}
 
-   .John{
+.John{
     margin-top: 40%;
     line-height: 25px;
     font-weight:200; 
@@ -230,31 +225,106 @@
 }
 
 .John h4{
-text-align: left;
-margin-bottom:10px;
-line-height: 65px;
-font-family: "Poppins", sans-serif;
-font-weight: 500;
-font-style: normal;
-font-size: 50px;
-width: 70%;
+    text-align: left;
+    margin-bottom:10px;
+    line-height: 65px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 50px;
+    width: 70%;
 }
 
 .John p{
-width:33%;
-font-weight: 300;
+    width:33%;
+    font-weight: 300;
 }
 
 .John img{
-position: absolute;
-top:51%;
-left:60%;
-border-radius: 10%;
+    position: absolute;
+    top:51%;
+    left:60%;
+    border-radius: 10%;
 }
-   
-
 
 /* Responsive for smaller screens */
+
+/* Stack header nav on small screens */
+@media (max-width: 768px) {
+  header div.flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  header nav.space-x-6 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  main img {
+    position: static !important;
+    width: 90% !important;
+    left: auto !important;
+    padding-top: 10% !important;
+    margin: 0 auto;
+    display: block;
+  }
+
+  main p {
+    padding-left: 5% !important;
+    width: 90% !important;
+    text-align: center !important;
+  }
+
+  .yellow {
+    height: auto !important;
+    padding: 4rem 0;
+  }
+
+  .yellow h1 {
+    font-size: 2.5rem !important;
+    padding-top: 0;
+  }
+
+  .aboutline {
+    position: static !important;
+    margin: 1rem auto;
+  }
+
+  .page3 .new {
+    flex-direction: column !important;
+    padding-left: 0 !important;
+    align-items: center !important;
+  }
+
+  .Jane h4, .John h4 {
+    width: 100% !important;
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+  }
+
+  .Jane p, .John p {
+    width: 90% !important;
+    text-align: center !important;
+  }
+
+  .Jane img, .John img {
+    position: static !important;
+    margin: 1rem auto;
+    width: 70% !important;
+    border-radius: 1rem !important;
+  }
+
+  .John {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+  }
+}
+
+/* Footer responsiveness */
 @media (max-width: 600px) {
   .footer-container {
     flex-direction: column;
@@ -268,3 +338,21 @@ border-radius: 10%;
   }
 }
 
+
+@media (max-width: 767px) {
+  #nav-menu {
+    flex-direction: column;
+    background-color: #ffc900;
+    position: absolute;
+    top: 64px; /* height of your header */
+    right: 0;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  #nav-menu a {
+    display: block;
+    padding: 1rem 2rem;
+    border-top: 1px solid rgba(0,0,0,0.1);
+  }
+}

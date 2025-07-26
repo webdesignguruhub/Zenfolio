@@ -30,16 +30,39 @@
 </head>
 <body>
 <header class="bg-[#ffc900] shadow-md sticky top-0 z-50">
-    <div class="px-6 py-4 flex items-center justify-between max-w-7xl mx-auto">
-         <a href="index.html"><img class="logo" src="/Images/ZenFolio logo.png" width= "200px" height="50%"></a>
-      <nav class="space-x-6">
-        <a href="index.html" class="text-black hover:text-white transition">Home</a>
-        <a href="about.html" class="text-black hover:text-white transition">About</a>
-        <a href="store.html" class="text-black hover:text-white transition">Store</a>
-        <a href="contact.html" class="text-black hover:text-white transition">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <div class="px-6 py-4 flex items-center justify-between max-w-7xl mx-auto relative">
+    <a href="index.html">
+      <img class="logo" src="/Images/ZenFolio logo.png" width="200px" height="50%" alt="Logo" />
+    </a>
+
+    <!-- Hamburger button (shows on small screens) -->
+    <button id="nav-toggle" class="md:hidden text-black focus:outline-none" aria-label="Toggle navigation menu">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+
+    <!-- Navigation menu -->
+    <nav id="nav-menu" class="hidden md:flex space-x-6 absolute md:static top-full right-0 md:top-auto md:right-auto bg-[#ffc900] w-full md:w-auto">
+      <a href="index.html" class="block md:inline-block px-4 py-2 text-black hover:text-white transition">Home</a>
+      <a href="about.html" class="block md:inline-block px-4 py-2 text-black hover:text-white transition">About</a>
+      <a href="store.html" class="block md:inline-block px-4 py-2 text-black hover:text-white transition">Store</a>
+      <a href="contact.html" class="block md:inline-block px-4 py-2 text-black hover:text-white transition">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  // Wait until DOM content is loaded
+  document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('hidden');
+    });
+  });
+</script>
 <main page="mainabout"> 
     
     <div class="yellow">
