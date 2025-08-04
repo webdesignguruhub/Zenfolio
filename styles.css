@@ -157,78 +157,6 @@ main.relative a.read-more-btn:focus {
   left: 60%;
 }
 
-/* ----- Page 3 ----- */
-.page-3 {
-  position: relative;
-  background-color: white;
-  padding-left: 10%;
-  padding-top: 10%;
-  padding-bottom: 30%;
-}
-
-.line {
-  position: absolute;
-  margin-left: 3%;
-  height: 1%;
-  width: 2%;
-  background-color: rgb(255, 200, 0);
-}
-
-.page-3 h1 {
-  line-height: 65px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 50px;
-  width: 20%;
-}
-
-.offer-part-1 h2,
-.offer-part-2 h2,
-.offer-part-3 h2 {
-  padding-top: 30px;
-}
-
-.offer-part-1 p,
-.offer-part-2 p,
-.offer-part-3 p {
-  padding-top: 20px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 15px;
-}
-
-.offer-part-1 p {
-  width: 23%;
-}
-
-.offer-part-2 p {
-  width: 35%;
-}
-
-.offer-part-3 p {
-  width: 70%;
-}
-
-.offer-part-1 {
-  padding-left: 22%;
-  position: absolute;
-  top: 15%;
-}
-
-.offer-part-2 {
-  position: absolute;
-  top: 15%;
-  left: 55%;
-}
-
-.offer-part-3 {
-  position: absolute;
-  top: 15%;
-  left: 78%;
-}
-
 /* ======= Responsive tweaks ======= */
 
 /* page-2 responsiveness */
@@ -258,52 +186,6 @@ main.relative a.read-more-btn:focus {
   }
 }
 
-/* page-3 responsiveness */
-@media (max-width: 1024px) {
-  .page-3 {
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 60px;
-    padding-bottom: 100px;
-  }
-
-  .line {
-    position: static;
-    margin: 10px auto;
-    width: 60px;
-    height: 4px;
-  }
-
-  .page-3 h1 {
-    width: 100%;
-    font-size: 36px;
-    text-align: center;
-  }
-
-  .offer-part-1,
-  .offer-part-2,
-  .offer-part-3 {
-    position: static;
-    width: 100%;
-    padding-left: 0;
-    margin-top: 40px;
-    text-align: center;
-  }
-
-  .offer-part-1 p,
-  .offer-part-2 p,
-  .offer-part-3 p {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .offer-part-1 img,
-  .offer-part-2 img,
-  .offer-part-3 img {
-    max-width: 100%;
-    height: auto;
-  }
-}
 
 /* main responsiveness for very small devices */
 @media (max-width: 480px) {
