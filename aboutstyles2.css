@@ -251,17 +251,6 @@ main p{
 
 /* Stack header nav on small screens */
 @media (max-width: 768px) {
-  header div.flex {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  header nav.space-x-6 {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-  }
 
   main img {
     position: static !important;
@@ -324,6 +313,8 @@ main p{
   }
 }
 
+
+
 /* Footer responsiveness */
 @media (max-width: 600px) {
   .footer-container {
@@ -339,20 +330,7 @@ main p{
 }
 
 
-@media (max-width: 767px) {
-  #nav-menu {
-    flex-direction: column;
-    background-color: #ffc900;
-    position: absolute;
-    top: 64px; /* height of your header */
-    right: 0;
-    width: 100%;
-    padding: 1rem 0;
-  }
+@media (max-width: 750px) {
 
-  #nav-menu a {
-    display: block;
-    padding: 1rem 2rem;
-    border-top: 1px solid rgba(0,0,0,0.1);
-  }
 }
+
