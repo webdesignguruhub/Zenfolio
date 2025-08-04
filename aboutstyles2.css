@@ -334,3 +334,340 @@ main p{
 
 }
 
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Open Sans;
+    animation: fadeIn 1s;
+    scroll-behavior: smooth;
+}
+
+.guidelines::before,
+.guidelines::after {
+    content: '';
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.3); /* Adjust color and opacity as needed */
+    z-index: 1000;
+    pointer-events: none; /* Makes sure it doesn't interfere with your design */
+}
+
+.guidelines::before {
+    width: 2px;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+
+.guidelines::after {
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.yellow{
+    position: absolute;
+    height:40%;
+    width:100%;
+    background-color: rgb(255, 200, 0);
+}
+
+.yellow h1{
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 40px;
+    padding-top: 5%;
+    text-align: center;
+    color: black;
+}
+
+main{
+    background-color: aliceblue;
+    padding-bottom: 10%;
+}
+
+main img{
+    position:relative;
+    padding-top: 13%;
+    left: 28%;
+    width: 45%;
+}
+
+main p{
+    padding-top: 4%;
+    padding-left:28%;
+    width:  74%;
+    line-height: 30px;
+    text-align:left;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+}
+
+.aboutline{
+    position: absolute;
+    top:46;
+    left:49%;
+    background-color: rgb(255, 255, 255);
+    width: 30px;
+    height: 5px;
+}
+
+.page2{
+    background-color: none;
+    width:100%;
+    height:500px;
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    padding-top:0%;
+    margin-bottom: 5%;
+}
+
+.page2 h1{
+    padding-bottom:3% ;
+    font-size: 35px;
+}
+
+.page2 p{
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.vision{
+    text-align: justify;
+    position: absolute;
+    width: 29%;
+    top: 30%;
+    left: 60%;
+    border: solid 2px #fff9e0;
+    border-radius: 5%;
+    padding: 20px 60px 70px 20px;
+    background-color: #fff7ed;
+    color: rgb(0, 0, 0);
+    box-shadow: 10px 10px 10px 5px rgb(155, 155, 155);
+}
+
+.mission {
+    text-align: justify;
+    position: absolute;
+    width: 30%;
+    top: 30%;
+    left:10%;
+    border: solid 2px #f8f3de;
+    border-radius: 5%;
+    padding: 20px 60px 70px 20px;
+    background-color: #fff7ed;
+    color: rgb(0, 0, 0);
+    box-shadow: 10px 10px 10px 5px rgb(155, 155, 155);
+}
+
+.page3{
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    align-content: center;
+    background-color: linen;
+    position: relative;
+}
+
+.page3 h1{
+    margin: 5%;
+    text-align: center;
+    font-size: 50px;
+}
+
+.Founder-line{
+    position: absolute;
+    top:7%;
+    left:49%;
+    background-color: rgb(255, 187, 0);
+    width: 30px;
+    height: 5px;
+}
+
+.new{
+    display: flex;
+    flex-direction:column;
+    padding-top:10px ;
+    padding-left: 20%;
+    align-items: center;
+}
+
+.Jane{
+    margin-top:15% ;
+    line-height: 25px;
+    font-weight:200;    
+}
+
+.Jane h4{
+    text-align: left;
+    margin-bottom:10px;
+    line-height: 65px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 50px;
+    width: 70%;
+}
+
+.Jane p{
+    width:33%;
+    font-weight: 300;
+}
+
+.Jane img{
+    position: absolute;
+    top: 15%;
+    left:60%;
+    border-radius: 10%;
+}
+
+.John{
+    margin-top: 40%;
+    line-height: 25px;
+    font-weight:200; 
+    margin-bottom: 50%;   
+}
+
+.border{
+    width:100%;
+    height:50%;
+    background-color:#fbbf24;
+    border:3px solid black;
+    padding-left: 5%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.border2{
+    width:100%;
+    height:70%;
+    background-color:#f7e59b;
+    border:3px solid black;
+    padding-left: 5%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.John h4{
+    text-align: left;
+    margin-bottom:10px;
+    line-height: 65px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 50px;
+    width: 70%;
+}
+
+.John p{
+    width:33%;
+    font-weight: 300;
+}
+
+.John img{
+    position: absolute;
+    top:51%;
+    left:60%;
+    border-radius: 10%;
+}
+
+/* Responsive for smaller screens */
+
+/* Stack header nav on small screens */
+@media (max-width: 768px) {
+
+  main img {
+    position: static !important;
+    width: 90% !important;
+    left: auto !important;
+    padding-top: 10% !important;
+    margin: 0 auto;
+    display: block;
+  }
+
+  main p {
+    padding-left: 5% !important;
+    width: 90% !important;
+    text-align: center !important;
+  }
+
+  .yellow {
+    height: auto !important;
+    padding: 4rem 0;
+  }
+
+  .yellow h1 {
+    font-size: 2.5rem !important;
+    padding-top: 0;
+  }
+
+  .aboutline {
+    position: static !important;
+    margin: 1rem auto;
+  }
+
+  .page3 .new {
+    flex-direction: column !important;
+    padding-left: 0 !important;
+    align-items: center !important;
+  }
+
+  .Jane h4, .John h4 {
+    width: 100% !important;
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+  }
+
+  .Jane p, .John p {
+    width: 90% !important;
+    text-align: center !important;
+  }
+
+  .Jane img, .John img {
+    position: static !important;
+    margin: 1rem auto;
+    width: 70% !important;
+    border-radius: 1rem !important;
+  }
+
+  .John {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+  }
+}
+
+
+
+/* Footer responsiveness */
+@media (max-width: 600px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .footer-nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+
+@media (max-width: 750px) {
+
+}
+
+
