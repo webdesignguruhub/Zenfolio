@@ -68,6 +68,20 @@
       });
     });
   </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("nav-toggle");
+    const menu = document.getElementById("nav-menu");
+
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("scale-y-0");
+      menu.classList.toggle("opacity-0");
+      menu.classList.toggle("scale-y-100");
+      menu.classList.toggle("opacity-100");
+    });
+  });
+</script>
+
 </head>
 
 <body class="bg-[#fef8e7] text-black">
@@ -141,6 +155,7 @@
 
 </body>
 </html>
+
 
 
 
