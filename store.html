@@ -109,7 +109,17 @@
 
   </div>
 </header>
+<script>
+  // Wait until DOM content is loaded
+  document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
 
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('hidden');
+    });
+  });
+</script>
 
 <script>
   document.getElementById("nav-toggle").onclick = () => {
@@ -155,6 +165,7 @@
 </script>
 </body>
 </html>
+
 
 
 
