@@ -74,30 +74,40 @@
 
 <!-- Header -->
 <header class="bg-[#ffc900] shadow-md sticky top-0 z-50">
-  <div class="px-6 py-4 flex items-center justify-between max-w-7xl mx-auto">
+  <div class="relative px-6 py-4 flex items-center justify-between max-w-7xl mx-auto">
+
     <a href="index.html">
       <img src="Images/ZenFolio logo.png" width="200" alt="Logo" />
     </a>
 
-    <button id="nav-toggle" class="md:hidden">
+    <!-- Hamburger -->
+    <button
+      id="nav-toggle"
+      class="md:hidden text-black focus:outline-none"
+      aria-label="Toggle navigation"
+    >
       <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path d="M4 6h16M4 12h16M4 18h16" />
       </svg>
     </button>
 
+    <!-- Nav -->
     <nav
-  id="nav-menu"
-  class="hidden absolute top-full left-0 w-full bg-[#ffc900] flex-col space-y-4 px-6 py-4
-         md:static md:flex md:flex-row md:space-y-0 md:space-x-6 md:w-auto md:p-0"
->
-
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="store.html">Store</a>
-      <a href="contact.html">Contact</a>
+      id="nav-menu"
+      class="hidden absolute top-full left-0 w-full bg-[#ffc900]
+             flex flex-col space-y-4 px-6 py-4
+             md:static md:flex md:flex-row md:space-y-0 md:space-x-6
+             md:w-auto md:p-0"
+    >
+      <a href="index.html" class="hover:text-white transition">Home</a>
+      <a href="about.html" class="hover:text-white transition">About</a>
+      <a href="store.html" class="hover:text-white transition">Store</a>
+      <a href="contact.html" class="hover:text-white transition">Contact</a>
     </nav>
+
   </div>
 </header>
+
 
 <script>
   document.getElementById("nav-toggle").onclick = () => {
@@ -131,5 +141,6 @@
 
 </body>
 </html>
+
 
 
